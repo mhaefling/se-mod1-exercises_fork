@@ -8,32 +8,39 @@ RSpec.describe 'reduce' do
     expect(result).to eq(473)
   end
 
-  xit 'subtracts a list of numbers' do
+  it 'subtracts a list of numbers' do
     numbers = [28, 12, 38, 1, 91]
     result = numbers.reduce(0) do |difference, number|
-      # Your code goes here
+     difference - number
     end
+    p result
     expect(result).to eq(-170)
   end
 
-  xit 'multiplies a list of numbers' do
+  it 'multiplies a list of numbers' do
     numbers = [2, 3, 5, 7]
-    # initial value is 1
-    # Your code goes here
+    result = numbers.reduce(1) do |multiple, number|
+      multiple * number
+    end
+    p result
     expect(result).to eq(210)
   end
 
   xit 'capitalize key words in phrase' do
     keywords = ["fish", "blue"]
-    # initial value is 'one fish two fish red fish blue fish'
-    # Your code goes here
+    phrase = 'one fish two fish red fish blue fish'
+    result = keywords.reduce do |word, word_up|
+      phrase.gsub(word, word.upcase)
+    end
     expect(result).to eq('one FISH two FISH red FISH BLUE FISH')
   end
 
-  xit 'divides 560 by a bunch of numbers' do
+  it 'divides 560 by a bunch of numbers' do
     numbers = [2, 2, 2, 5, 7]
-    # initial value is 560
-    # Your code goes here
+    result = numbers.reduce(1) do |quotient, number|
+      quotient = 560
+      number / quotient
+    end
     expect(result).to eq(2)
   end
 

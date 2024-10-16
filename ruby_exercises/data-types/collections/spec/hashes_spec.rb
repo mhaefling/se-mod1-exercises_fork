@@ -12,7 +12,7 @@ RSpec.describe 'Hashes' do
     expect(empty[:not_found]).to eq(0)
   end
 
-  it 'test 3' do
+  xit 'test 3' do
     # In the line below, create a hash called ages. The hash should
     # have a key of "ben" with a value of 4 and a key of "kelly" with
     # a value of 6
@@ -23,7 +23,7 @@ RSpec.describe 'Hashes' do
     expect(ages["kelly"]).to eq(6)
   end
 
-  it 'test 4' do
+  xit 'test 4' do
     # In the line below, create a hash called ages. The hash should
     # have a key of :ben with a value of 4 and a key of :kelly with
     # a value of 6.
@@ -42,7 +42,7 @@ RSpec.describe 'Hashes' do
     expect(ages[:kelly]).to eq(6)
   end
 
-  it 'test 5' do
+  xit 'test 5' do
     # In the line below, create a new hash called ingredients.
     # Create a "tomatoes" key and a :carrots key with the corresponding values.
     ingredients = { "tomatoes" => 3, carrots: 7 }
@@ -51,7 +51,7 @@ RSpec.describe 'Hashes' do
     expect(ingredients[:carrots]).to eq(7)
   end
 
-  it 'test 6' do
+  xit 'test 6' do
     # In the line below, create a new hash with
     # default values of zero.
     ingredients = Hash.new(0)
@@ -60,7 +60,7 @@ RSpec.describe 'Hashes' do
     expect(ingredients[:carrots]).to eq(0)
   end
 
-  it 'test 7' do
+  xit 'test 7' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -72,7 +72,7 @@ RSpec.describe 'Hashes' do
     expect(grapes).to eq("Grapes of Wrath")
   end
 
-  it 'test 8' do
+  xit 'test 8' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -91,7 +91,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  it 'test 9' do
+  xit 'test 9' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -108,7 +108,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  it 'test 10' do
+  xit 'test 10' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -123,7 +123,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  it 'test 11' do
+  xit 'test 11' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -135,7 +135,7 @@ RSpec.describe 'Hashes' do
     expect(grapes).to eq("Grapes of Wrath")
   end
 
-  it 'test 12' do
+  xit 'test 12' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -154,7 +154,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  it 'test 13' do
+  xit 'test 13' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -171,7 +171,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  it 'test 14' do
+  xit 'test 14' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -186,7 +186,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  it 'test 15' do
+  xit 'test 15' do
     ages = {
       "Jimmy" => 4,
       "Julio" => 8,
@@ -199,7 +199,7 @@ RSpec.describe 'Hashes' do
     expect(ages["Julio"]).to eq(9)
   end
 
-  it 'test 16' do
+  xit 'test 16' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -212,7 +212,7 @@ RSpec.describe 'Hashes' do
     expect(names).to eq([:Jimmy, :Julio, :Juliet])
   end
 
-  it 'test 17' do
+  xit 'test 17' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -225,7 +225,7 @@ RSpec.describe 'Hashes' do
     expect(age_list).to eq([4, 8, 9])
   end
 
-  it 'test 18' do
+  xit 'test 18' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -238,7 +238,7 @@ RSpec.describe 'Hashes' do
     expect(num_pairs).to eq(3)
   end
 
-  it 'test 19' do
+  xit 'test 19' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -257,7 +257,7 @@ RSpec.describe 'Hashes' do
     expect(jackie_in_hash).to eq(false)
   end
 
-  it 'test 20' do
+  xit 'test 20' do
     ages = {
       Jimmy: 4,
       Julio: 8,

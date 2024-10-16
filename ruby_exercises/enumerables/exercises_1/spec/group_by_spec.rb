@@ -8,10 +8,10 @@ RSpec.describe 'group by' do
     expect(grouped).to eq(expected)
   end
 
-  xit 'group by odd and even' do
+  it 'group by odd and even' do
     numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
     odd_and_even = numbers.group_by do |number|
-      # Your code goes here
+      
     end
     expected = {1=>[1, 1, 3, 5, 13, 21, 55], 0=>[2, 8, 34]}
     expect(odd_and_even).to eq(expected)

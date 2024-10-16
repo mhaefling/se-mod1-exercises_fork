@@ -16,7 +16,6 @@ class Medusa
   def statues
     @statues
   end
-
 end
 
 class Person

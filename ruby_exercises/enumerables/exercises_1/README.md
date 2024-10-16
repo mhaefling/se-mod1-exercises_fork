@@ -26,12 +26,12 @@ Here's the order to work through:
 * `sort_by`
 * `count`
 * `reject`
-* `reduce` (this one is tricky!)
+* `reduce` (this one is tricky!) - Finish
 * `any?`
 * `all?`
 * `none?`
 * `one?`
-* `group_by` (this one is tricky too!)
+* `group_by` (this one is tricky too!) - Finish
 * `zip`
 
 When done (or before you've finished all of these, if you feel like it) go check out exercises in the `exercises_2` directory.

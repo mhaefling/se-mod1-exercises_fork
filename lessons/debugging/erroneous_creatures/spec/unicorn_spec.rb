@@ -1,4 +1,4 @@
-require '.lib/unicorn'
+require './lib/unicorn'
 
 RSpec.describe Unicorn do
   xit "has a name" do
@@ -40,7 +40,7 @@ RSpec.describe Unicorn do
     expect(unicorn.eat).to eq("**;* yummmm cotton candy **;*")
   end
 
-  xit "unicorn cannot fly while eating" do
+  it "unicorn cannot fly while eating" do
     unicorn = Unicorn.new("Johnny")
 
     unicorn.eat

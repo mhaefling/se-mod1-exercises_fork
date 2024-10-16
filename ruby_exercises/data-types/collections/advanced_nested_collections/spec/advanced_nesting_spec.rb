@@ -112,8 +112,9 @@ RSpec.describe 'Advanced Nested Collections' do
     # Return the full menu for Olive Garden
 
     olive_garden_menu = Hash.new
-    # stores[:olive_garden][:dishes].each { |key, value| olive_garden_menu[key] = value }
-    stores[:olive_garden][:dishes].each { |key, value| olive_garden_menu.store(key, value) }
+    # stores[:olive_garden][:dishes].each { |key, value| olive_garden_menu.store(key, value) }
+    stores[:olive_garden][:dishes].each { |key, value| olive_garden_menu[key] = value }
+  
     puts olive_garden_menu
     expected = {
       "Risotto" => {
