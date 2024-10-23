@@ -130,7 +130,7 @@ RSpec.describe 'count pattern' do
     expect(whole_numbers).to eq(2)
   end
 
-  xit 'test 10' do
+  it 'test 10' do
     prices = {
       "shoes" => 1.0,
       "backpack" => 3.9,
@@ -138,8 +138,13 @@ RSpec.describe 'count pattern' do
       "posters" => 18.5,
       "food" => 20.0
     }
-    # Your Code Here
-
+    whole_numbers = 0
+    prices.each do |item, price|
+      if price % 1 == 0
+        whole_numbers += 1
+      end
+    end
+    puts whole_numbers
     expect(whole_numbers).to eq(2)
   end
 end

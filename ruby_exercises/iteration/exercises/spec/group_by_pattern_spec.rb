@@ -7,26 +7,33 @@ RSpec.describe 'group by pattern' do
     words.each do |word|
       grouped[word.length] << word
     end
+    p grouped
     expected = {3=>["sue", "dog", "cat"], 4=>["adam", "fort", "tops"], 5=>["alice", "steve", "sally"]}
     expect(grouped).to eq(expected)
   end
 
-  xit 'test 2' do
+  it 'test 2' do
     numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
     # group by odd and even
     odd_and_even = Hash.new {|hash, key| hash[key] = []}
     numbers.each do |number|
-      # Your code goes here
+      if number % 2 == 0
+      odd_and_even[0] << number
+      else
+      odd_and_even[1] << number
+      end
     end
+    p odd_and_even
     expected = {1=>[1, 1, 3, 5, 13, 21, 55], 0=>[2, 8, 34]}
     expect(odd_and_even).to eq(expected)
   end
 
-  xit 'test 3' do
+  it 'test 3' do
     words = ["ant", "axis", "albatross", "bolt", "badge", "butter", "car", "cdr", "column"]
     # group by first letter
     words_by_first_letter = Hash.new {|hash, key| hash[key] = []}
-    # Your code goes here
+    words.each do |word|
+
     expected = {"a"=>["ant", "axis", "albatross"], "b"=>["bolt", "badge", "butter"], "c"=>["car", "cdr", "column"]}
     expect(words_by_first_letter).to eq(expected)
   end

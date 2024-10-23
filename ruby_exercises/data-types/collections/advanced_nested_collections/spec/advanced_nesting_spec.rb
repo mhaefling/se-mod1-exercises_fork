@@ -110,11 +110,9 @@ RSpec.describe 'Advanced Nested Collections' do
 
   it 'test 10' do
     # Return the full menu for Olive Garden
-
     olive_garden_menu = Hash.new
-    # stores[:olive_garden][:dishes].each { |key, value| olive_garden_menu.store(key, value) }
-    stores[:olive_garden][:dishes].each { |key, value| olive_garden_menu[key] = value }
-  
+    olive_garden_menu["Risotto"] = stores[:olive_garden][:dishes][0]
+    olive_garden_menu["Steak"] = stores[:olive_garden][:dishes][1]
     puts olive_garden_menu
     expected = {
       "Risotto" => {
@@ -131,10 +129,15 @@ RSpec.describe 'Advanced Nested Collections' do
     expect(olive_garden_menu).to eq(expected)
   end
 
-  xit 'test 11' do
+  it 'test 11' do
     # Return a full menu across all restaurants
-    full_menu = ____
-
+    full_menu = Hash.new
+    full_menu["Risotto"] = stores[:olive_garden][:dishes][0]
+    full_menu["Steak"] = stores[:olive_garden][:dishes][1]
+    full_menu["Pancakes"] = stores[:dennys][:dishes][0]
+    full_menu["Waffles"] = stores[:dennys][:dishes][1]
+    full_menu["Big Mac"] = stores[:macdonalds][:dishes][0]
+    full_menu["Fries"] = stores[:macdonalds][:dishes][1]
     expected = {
       "Risotto" => {
         :name => "Risotto",
